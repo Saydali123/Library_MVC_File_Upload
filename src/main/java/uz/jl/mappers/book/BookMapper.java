@@ -7,16 +7,19 @@ import uz.jl.dto.book.BookUpdateDto;
 import uz.jl.mappers.base.GenericMapper;
 import uz.jl.models.Book;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Saydali Murodullayev, Tue 1:35 AM. 2/15/2022
  */
 @Service
 public class BookMapper implements GenericMapper<Book, BookDto, BookCreateDto, BookUpdateDto> {
+
     @Override
     public Book fromCreateDto(BookCreateDto dto) {
-        return null;
+        return new Book(dto.getName(), dto.getDescription());
     }
 
     @Override
@@ -26,12 +29,13 @@ public class BookMapper implements GenericMapper<Book, BookDto, BookCreateDto, B
 
     @Override
     public BookDto toDto(Book entity) {
-        return null;
+        return new BookDto(entity.getId(), entity.getName(), entity.getDescription(),
+                entity.getCoverPath(), entity.getUploads());
     }
 
     @Override
     public List<BookDto> toDto(List<Book> entityList) {
-        return null;
+        return entityList.stream().map(this::toDto).collect(Collectors.toList());
     }
 
     @Override

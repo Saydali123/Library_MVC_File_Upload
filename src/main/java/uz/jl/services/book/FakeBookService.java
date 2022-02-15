@@ -2,6 +2,7 @@ package uz.jl.services.book;
 
 import lombok.NonNull;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,9 @@ import static uz.jl.DB.books;
 /**
  * @author Saydali Murodullayev, Tue 1:32 AM. 2/15/2022
  */
-@Service
+
+@Slf4j
+@Service("fakeBookService")
 public class FakeBookService extends AbstractService<BookRepository, BookMapper, BookValidator>
         implements GenericCrudService<BookDto, BookCreateDto, BookUpdateDto, String> {
 
@@ -42,7 +45,7 @@ public class FakeBookService extends AbstractService<BookRepository, BookMapper,
 
     @Override
     public List<BookDto> getAll() {
-        return books;
+        return mapper.toDto(books);
     }
 
     @Override
@@ -52,7 +55,9 @@ public class FakeBookService extends AbstractService<BookRepository, BookMapper,
 
     @Override
     public BookDto get(String id) {
-        return books.stream().filter(book -> book.getIdAsString().equals(id)).findFirst().orElseThrow(() -> new NotFoundException("Book Not Found with id", HttpStatus.NOT_FOUND));
+        Book book1 = books.stream().filter(book -> book.getIdAsString().equals(id)).findFirst().orElseThrow(() ->
+                new NotFoundException("Book Not Found with id", HttpStatus.NOT_FOUND));
+        return mapper.toDto(book1);
     }
 
     @Override

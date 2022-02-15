@@ -14,6 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @ToString
 @Component
+@Builder
 public class GenericDto {
-    UUID id;
+    protected UUID id = UUID.randomUUID();
 }
