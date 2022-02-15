@@ -22,9 +22,6 @@ import java.util.List;
 
 import static uz.jl.DB.books;
 
-/**
- * @author Saydali Murodullayev, Tue 1:32 AM. 2/15/2022
- */
 @Service
 public class FakeBookService extends AbstractService<BookRepository, BookMapper, BookValidator>
         implements GenericCrudService<BookDto, BookCreateDto, BookUpdateDto, String> {

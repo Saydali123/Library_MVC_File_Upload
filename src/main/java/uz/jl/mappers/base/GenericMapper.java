@@ -6,9 +6,6 @@ import uz.jl.models.base.BaseGenericModel;
 
 import java.util.List;
 
-/**
- * @author Saydali Murodullayev, Tue 12:47 AM. 2/15/2022
- */
 
 /**
  * @param <E>  entity

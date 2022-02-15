@@ -6,9 +6,6 @@ import uz.jl.models.base.Auditable;
 
 import java.util.UUID;
 
-/**
- * @author Saydali Murodullayev, Tue 12:30 AM. 2/15/2022
- */
 @Getter
 @Setter
 @AllArgsConstructor

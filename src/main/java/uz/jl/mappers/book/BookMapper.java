@@ -9,9 +9,6 @@ import uz.jl.models.Book;
 
 import java.util.List;
 
-/**
- * @author Saydali Murodullayev, Tue 1:35 AM. 2/15/2022
- */
 @Service
 public class BookMapper implements GenericMapper<Book, BookDto, BookCreateDto, BookUpdateDto> {
     @Override

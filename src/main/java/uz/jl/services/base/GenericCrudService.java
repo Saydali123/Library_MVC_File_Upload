@@ -7,9 +7,6 @@ import uz.jl.dto.base.GenericDto;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * @author Saydali Murodullayev, Tue 12:37 AM. 2/15/2022
- */
 public interface GenericCrudService<
         D extends GenericDto,
         CD extends BaseGenericDto,

@@ -11,9 +11,6 @@ import uz.jl.mappers.base.BaseGenericMapper;
 import uz.jl.repository.base.BaseGenericRepository;
 import uz.jl.validators.base.BaseGenericValidator;
 
-/**
- * @author Saydali Murodullayev, Tue 12:28 AM. 2/15/2022
- */
 public abstract class AbstractService<
         R extends BaseGenericRepository,
         M extends BaseGenericMapper,
