@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
-/**
- * @author Saydali Murodullayev, Tue 12:45 AM. 2/15/2022
- */
 @Getter
 @Setter
 @NoArgsConstructor

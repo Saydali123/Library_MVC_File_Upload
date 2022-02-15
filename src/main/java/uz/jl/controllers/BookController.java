@@ -8,9 +8,6 @@ import uz.jl.services.book.FakeBookService;
 
 import javax.servlet.annotation.MultipartConfig;
 
-/**
- * @author Saydali Murodullayev, Tue 12:27 AM. 2/15/2022
- */
 @Controller
 @MultipartConfig
 @RequestMapping("/book/*")

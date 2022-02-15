@@ -10,9 +10,6 @@ import java.io.Serializable;
 import java.sql.*;
 import java.util.Objects;
 
-/**
- * @author Saydali Murodullayev, Tue 12:29 AM. 2/15/2022
- */
 public abstract class AbstractRepository implements BaseGenericRepository {
 
     protected Connection connection;

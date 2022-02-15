@@ -11,9 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Saydali Murodullayev, Tue 1:35 AM. 2/15/2022
- */
 @Service
 public class BookMapper implements GenericMapper<Book, BookDto, BookCreateDto, BookUpdateDto> {
 
