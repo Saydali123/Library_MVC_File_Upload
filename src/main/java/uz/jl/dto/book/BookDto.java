@@ -23,7 +23,7 @@ public class BookDto extends GenericDto {
     private String coverPath;
     private Uploads uploads;
 
-    @Builder
+    @Builder(builderMethodName = "child")
     public BookDto(UUID id, String name, String description, String coverPath, Uploads uploads) {
         super(id);
         this.name = name;
